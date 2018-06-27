@@ -42,14 +42,6 @@
     ├── vendors  公共库文件
     └── views
         ├── login  登陆页面
-        ├── access  权限管理
-        ├── error_page  错误页面
-        ├── form  表单编辑
-        ├── home  首页
-        ├── international  多语言
-        ├── message  消息中心
-        ├── my_components  业务组件
-        └── tables  综合表格
 ```
 
 ## Links
