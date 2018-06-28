@@ -1,0 +1,71 @@
+
+
+.layout-logo {
+    height: 64px;
+    line-height: 64px;
+    position: absolute;
+    left: 0;
+    width: 200px;
+    padding-left: 30px;
+    text-align: center;
+    img {
+        width: 32px;
+        margin-right: 5px;
+        position: absolute;
+        top: 15px;
+        left: 30px;
+    }
+    .logo-text {
+        font-size: 20px;
+        display: inline-block;
+        color: #Fff;
+        font-weight: normal;
+    }
+}
+.collapse-btn{
+    position: absolute;
+    left: 200px;
+    height:64px;
+    line-height: 64px;
+    width: 64px;
+    text-align: center;
+    cursor: pointer;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+    &.active{
+        i{
+            &::before{
+                content: "\e9ad"
+            }
+        }
+    }
+    i{
+        color: #fff;
+        font-size:20px;
+    }
+}
+.header-right {
+    float: right;
+    height: 100%;
+    overflow: hidden;
+    .right-item {
+        display: inline-block;
+        padding: 0 12px;
+        cursor: pointer;
+        color: #fff;
+        .account-name {
+            margin: 0 5px;
+        }
+        .ivu-badge-dot {
+            box-shadow: none !important;
+        }
+        .user-list{
+            .ivu-select-dropdown{
+                box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+                border-radius: 0;
+            }
+            .ivu-dropdown-item{
+                font-size: 14px !important;
+            }
+        }
+    }
+}

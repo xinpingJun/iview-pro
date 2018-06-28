@@ -4,15 +4,16 @@ import Home from '../views/Home.vue'
 import About from '../views/About.vue'
 import Login from '../views/login/login.vue'
 import Main from '../views/main/main.vue'
+import Hello from '../components/HelloWorld.vue'
 
 Vue.use(Router)
 
 export default new Router({
   routes: [
     {
-      path: '/',
+      path: '/main',
       name: 'home',
-      component: Home
+      component: Main
     },
     {
       path: '/about',
@@ -25,9 +26,16 @@ export default new Router({
       component: Login
     },
     {
-      path: '/main',
-      name: 'main',
-      component: Main
-    }
+      path: '/hello',
+      name: 'hello',
+      component: Main,
+      children:[
+        {
+          path: 'index',
+          name: 'hello',
+          component: Hello
+        }
+      ]
+    },
   ]
 })

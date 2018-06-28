@@ -4,7 +4,7 @@
 			<div class="wrap-login100">
 				<form  @keydown.enter="login"  class="login100-form validate-form" autocomplete="off">
 					<span class="login100-form-title p-b-43">
-						I-ADMIN
+						Iview-Pro	
 						<p>VUE后台管理通用解决方案</p>
 					</span>
 					<div class="wrap-input100 validate-input "  >
@@ -21,8 +21,7 @@
 						<input class="input100 " 
 						:class="{'has-val':passwordEmpty}" 
 						type="password"  
-						v-model="password"  
-						 >
+						v-model="password">
 						<span class="focus-input100"></span>
 						<span class="label-input100">密码</span>
 					</div>
@@ -34,12 +33,12 @@
 							</Checkbox>
 						</div>
 					</div>
-
 					<div class="container-login100-form-btn">
 						<a class="login100-form-btn" @click="login">
 							登录
 						</a>
 					</div>
+
 				</form>
 				<div class="login100-more" :style="{backgroundImage:'url(' + loginBg + ')'}">
 				</div>

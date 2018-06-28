@@ -1,50 +1,55 @@
-<style scoped lang="scss">
-    @import './main';
-</style>
+
 <template>
     <div class="layout">
-        <Layout :style="{minHeight: '100vh'}">
-            <Sider collapsible :collapsed-width="78" v-model="isCollapsed">
-                <Menu active-name="1-2" theme="dark" width="auto" :class="menuitemClasses">
-                    <MenuItem name="1-1">
-                        <Icon type="ios-navigate"></Icon>
-                        <span>Option 1</span>
-                    </MenuItem>
-                    <MenuItem name="1-2">
-                        <Icon type="search"></Icon>
-                        <span>Option 2</span>
-                    </MenuItem>
-                    <MenuItem name="1-3">
-                        <Icon type="settings"></Icon>
-                        <span>Option 3</span>
-                    </MenuItem>
-                </Menu>
-            </Sider>
+        <Layout class="layout-wrapper">
+            <!-- 顶部栏 -->
+            <Header class="header-wrapper">
+                <HeaderBar @collapseFun="collapse_fun"></HeaderBar>
+            </Header>
             <Layout>
-                <Header :style="{background: '#fff', boxShadow: '0 2px 3px 2px rgba(0,0,0,.1)'}"></Header>
-                <Content :style="{padding: '16px'}">
-                    <Card>
-                        <div style="height: 600px">Content</div>
-                    </Card>
-                </Content>
+                <!-- <Sider  class="sider-wrapper" :style="{left:'-200px' ,flex:'0 0 0',maxWidth:'0',minWidth:'0'}"> -->
+                <Sider  class="sider-wrapper " :class="{ 'sider-collapse':isCollapse}">
+                    <!-- 侧边栏 -->
+                    <SideMenu></SideMenu>
+                </Sider>
+                <Layout  class="layout-content"  >
+                    <!-- 面包屑 -->
+                    <BreadcrumbBar></BreadcrumbBar>
+                    <Content class="main-content" >
+                        <!-- 主内容 -->
+                        
+                        <router-view></router-view>
+                    </Content>
+                </Layout>
+
             </Layout>
         </Layout>
     </div>
 </template>
 <script>
-    export default {
-        data () {
-            return {
-                isCollapsed: false
-            };
-        },
-        computed: {
-            menuitemClasses: function () {
-                return [
-                    'menu-item',
-                    this.isCollapsed ? 'collapsed-menu' : ''
-                ]
-            }
+import HeaderBar from './components/header-bar/header-bar'
+import SideMenu from './components//side-menu//side-menu'
+import BreadcrumbBar from './components/bread-crumb-bar/bread-crumb-bar'
+
+export default {
+    components:{
+        HeaderBar,
+        SideMenu,
+        BreadcrumbBar
+    },
+    data(){
+        return {
+            isCollapse:false
+        }
+    },
+    methods:{
+        collapse_fun(val){
+            this.isCollapse =val;
         }
     }
+};
 </script>
+ 
+<style scoped lang="scss">
+@import "./main";
+</style>
