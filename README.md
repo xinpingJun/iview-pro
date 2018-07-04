@@ -17,7 +17,7 @@ $ yarn serve         # 访问 http://localhost:8000
 ```
 
 ## 简介
-&emsp;&emsp;Iview Pro是基于Vue.js，搭配使用[iView] ，使用vue-cli 3.0 脚手架搭建的 Vue后台管理通用解决方案。
+&emsp;&emsp;Iview Pro是基于Vue.js，搭配使用[iView],参考[ivew-admin]，使用vue-cli 3.0 脚手架搭建的 Vue后台管理通用解决方案,实现动态路由和权限验证,新增侧边栏模态框,使用bootstrap栅格栏,ant-desgin 图标库。
 
 ## 项目结构
 ```shell
@@ -32,6 +32,7 @@ $ yarn serve         # 访问 http://localhost:8000
     └── views
         ├── login  登陆页面
         ├── main  主框架
+        ├── error-page  错误页面（iview-admin 2.0）
 ```
 ## 模板
 

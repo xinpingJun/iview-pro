@@ -1,5 +1,4 @@
 .layout {
-    background: #f5f7f9;
     position: relative;
     overflow-x: hidden;
     height: 100%;
@@ -8,46 +7,72 @@
 
 .layout-wrapper {
     min-height: 100vh;
+    background: #f1f4f5;
     .ivu-layout-header {
         padding: 0 12px;
     }
 }
+
 .header-wrapper {
     z-index: 10;
     background-color: #2b83f9;
     background-image: linear-gradient(143deg, #2945cb 20%, #2b83f9 81%, #3a9dff);
 }
-.sider-wrapper {
-    background: #fff;
-    
+
+.layout-main {
+    display: flex;
+}
+
+.sider-bar {
+    width: 200px;
+    margin-right: -200px;
+    position: relative;
+    left: 0;
+    transition: all .2s ease-in-out;
+    background: #fff; // border-right: solid 1px #e4eaec;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .08);
+    z-index: 10;
+    min-height: 100vh;
     .ivu-menu-vertical.ivu-menu-light:after {
         display: none;
     }
 }
-.sider-collapse{
-    left: -200px !important;
-    min-width: 0 !important;
-    max-width: 0 !important;
-    flex: 0 0 0 !important;
-    transition: all .2s ease-in-out;
+
+.tag-nav-wrapper {
+    padding: 0;
+    height: 40px;
+    background: #fff;
+    overflow: hidden;
 }
 
 .layout-content {
-    padding: 0 24px 24px;
+    margin-left: 200px;
+    display: flex;
+    flex: 1;
+    flex-direction: column;  
+    transition: all .2s ease-in-out;
+    .main-content {
+        box-sizing: border-box;  
+    }
+}
+
+// 菜单切换
+.content-collapse {
+    margin-left: 0 !important;
+}
+
+.sider-collapse {
+    left: -200px !important;
     transition: all .2s ease-in-out;
 }
 
-.main-content {
-    padding: 24px;
-    background: #fff
+@media (max-width: 768px) {
+    .sider-bar {
+        left: -200px;
+    }
+    .layout-content {
+        margin-left: 0;
+    }
+    .tag-nav-wrapper {
+    }
 }
-
-
-// @media (max-width: 768px) {
-//     .sider-wrapper{
-//         left: -200px !important;
-//         min-width: 0 !important;
-//         max-width: 0 !important;
-//         flex: 0 0 0 !important;
-//     }
-//   }

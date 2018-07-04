@@ -1,5 +1,3 @@
-
-
 .layout-logo {
     height: 64px;
     line-height: 64px;
@@ -22,27 +20,29 @@
         font-weight: normal;
     }
 }
-.collapse-btn{
+
+.collapse-btn {
     position: absolute;
     left: 200px;
-    height:64px;
+    height: 64px;
     line-height: 64px;
     width: 64px;
     text-align: center;
     cursor: pointer;
     transition: cubic-bezier(0.075, 0.82, 0.165, 1);
-    &.active{
-        i{
-            &::before{
+    &.active {
+        i {
+            &::before {
                 content: "\e9ad"
             }
         }
     }
-    i{
+    i {
         color: #fff;
-        font-size:20px;
+        font-size: 20px;
     }
 }
+
 .header-right {
     float: right;
     height: 100%;
@@ -58,14 +58,30 @@
         .ivu-badge-dot {
             box-shadow: none !important;
         }
-        .user-list{
-            .ivu-select-dropdown{
+        .user-list {
+            .ivu-select-dropdown {
                 box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
                 border-radius: 0;
             }
-            .ivu-dropdown-item{
+            .ivu-dropdown-item {
                 font-size: 14px !important;
             }
         }
+    }
+}
+
+.custom-wrapper {
+    position: absolute;
+    left: 264px;
+    color: #fff;
+    top: 0;
+}
+
+@media (max-width: 768px) {
+    .collapse-btn {
+        display: none;
+    }
+    .custom-wrapper {
+        display: none;
     }
 }
