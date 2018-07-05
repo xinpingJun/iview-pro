@@ -38,64 +38,23 @@ export default [{
       title: 'UI 示例'
     },
     component: Main,
-    children: [ 
+    children: [
       {
-        path: 'grids',
-        name: 'grids',
+        path: 'ui-model',
+        name: 'ui-model',
         meta: {
-          title: '栅格布局'
+          title: 'iview ui'
         },
-        component: () => import('@/views/ui/layout/grids.vue')
-      },
-      {
-        path: 'flex',
-        name: 'flex',
-        meta: {
-          title: '弹性布局'
-        },
-        component: () => import('@/views/ui/layout/flex.vue')
-      },
-      {
-        path: 'panel',
-        name: 'panel',
-        meta: {
-          title: '面板'
-        },
-        component: () => import('@/views/ui/basic/panel.vue')
-      },
-      {
-        path: 'buttons',
-        name: 'buttons',
-        meta: {
-          title: '按钮'
-        },
-        component: () => import('@/views/ui/basic/buttons.vue')
+        component: () => import('@/views/ui/ui-model.vue')
       },
       {
         path: 'modals',
         name: 'modals',
         meta: {
-          title: '模态框'
+          title: '对话框'
         },
-        component: () => import('@/views/ui/basic/modals.vue')
+        component: () => import('@/views/ui/modals.vue')
       },
-      {
-        path: 'utilities',
-        name: 'utilities',
-        meta: {
-          title: '辅助类'
-        },
-        component: () => import('@/views/ui/basic/utilities.vue')
-      },
-      {
-        path: 'dropdowns',
-        name: 'dropdowns',
-        meta: {
-          title: '下拉菜单'
-        },
-        component: () => import('@/views/ui/basic/dropdowns.vue')
-      },
-      
     ]
   },
   {
@@ -106,7 +65,31 @@ export default [{
       title: '页面示例'
     },
     component: Main,
-    children: [ 
+    children: [
+      {
+        path: '404',
+        name: '404',
+        meta: {
+          title: '404'
+        },
+        component: () => import('@/views/page/error-page/404.vue')
+      },
+      {
+        path: '401',
+        name: '401',
+        meta: {
+          title: '401'
+        },
+        component: () => import('@/views/page/error-page/401.vue')
+      },
+      {
+        path: '500',
+        name: '500',
+        meta: {
+          title: '500'
+        },
+        component: () => import('@/views/page/error-page/500.vue')
+      },
     ]
   },
   {
@@ -127,7 +110,7 @@ export default [{
       title: '表单示例'
     },
     component: Main,
-    children: [ 
+    children: [
     ]
   },
    {
@@ -138,7 +121,7 @@ export default [{
       title: '统计图表'
     },
     component: Main,
-    children: [ 
+    children: [
     ]
   },
   {
@@ -149,7 +132,7 @@ export default [{
       title: '系统管理'
     },
     component: Main,
-    children: [ 
+    children: [
     ]
   },
   // {

@@ -26,10 +26,10 @@ export default {
     }
   },
   mounted () {
-    this.timer = setInterval(() => {
-      if (this.second === 0) this.backPrev()
-      else this.second--
-    }, 1000)
+    // this.timer = setInterval(() => {
+    //   if (this.second === 0) this.backPrev()
+    //   else this.second--
+    // }, 1000)
   },
   beforeDestroy () {
     clearInterval(this.timer)
