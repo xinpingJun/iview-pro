@@ -1,7 +1,7 @@
 <template>
     <Menu ref="menu" :active-name="activeName" :open-names="openedNames" theme="light" width="200" :accordion="accordion" @on-select="handleSelect">
       <template v-for="(item,index)  in menuList">
-       
+
         <template v-if="item.children && item.children.length === 1">
             <MenuItem :name="item.children[0].name"  :key="index">
                <i class="icon anticon menu-icon" :class=item.children[0].meta.icon ></i>
@@ -36,7 +36,10 @@ export default {
       type: Array,
       default: []
     },
-    accordion: Boolean,
+    accordion: {
+      type:Boolean,
+      default:true,
+    },
     activeName: {
       type: String,
       default: ""
@@ -48,7 +51,7 @@ export default {
   },
   data(){
       return {
-         openedNames:[] 
+         openedNames:[]
       }
   },
   methods: {

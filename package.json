@@ -8,6 +8,8 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "@antv/data-set": "^0.8.9",
+    "@antv/g2": "^3.1.2",
     "axios": "^0.18.0",
     "iview": "^2.14.3",
     "js-cookie": "^2.2.0",

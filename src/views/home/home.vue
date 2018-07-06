@@ -52,21 +52,21 @@
                   <p class="ntroduction-title">基本介绍</p>
                   <div class="ntroduction-content">
                       Iview Pro是基于Vue.js,使用vue-cli 3.0 脚手架,
-                      在[iView]UI组件库的基础上,参考[ivew-admin],
-                      搭建的Vue后台管理通用后台管理系统,
+                      在[iView]UI组件库的基础上,参考[ivew-admin]的Vue后台管理通用解决方案。
                       实现动态路由和权限验证,
                       新增侧边栏对话框,
                       常用模块封装,
                       常用页面的整理,
+                      集成阿里G2图表库,
                       使用ant-desgin图标库。
                   </div>
                   <div class="ntroduction-tag">
-                    <Tag checkable color="blue">兼容IE11及现代浏览器</Tag>
-                    <Tag checkable color="green">简单易用</Tag>
-                    <Tag checkable color="red">crm</Tag>
-                    <Tag checkable color="yellow">节省时间</Tag>
-                    <Tag checkable color="blue">节约成本</Tag>
-                     <Tag checkable color="green">响应式布局</Tag>
+                    <Tag   color="blue">兼容IE11及现代浏览器</Tag>
+                    <Tag   color="green">简单易用</Tag>
+                    <Tag   color="red">crm</Tag>
+                    <Tag   color="yellow">节省时间</Tag>
+                    <Tag   color="blue">节约成本</Tag>
+                     <Tag   color="green">响应式布局</Tag>
                   </div>
                   <div class="ntroduction-table">
                       <Table :columns="columns1" :data="data1"></Table>
@@ -111,28 +111,73 @@
                 columns1: [
                     {
                         title: '模块',
-                        key: 'model'
+                        key: 'model',
+                        minWidth:50
                     },
                     {
                         title: '说明',
-                        key: 'description'
+                        key: 'description',
+                        minWidth:50
                     },
                     {
                         title: '进度',
-                        key: 'schedule'
+                        key: 'schedule',
+                        minWidth:100
                     },
                     {
                         title: '状态',
-                        key: 'status'
+                        key: 'status',
+                        minWidth:50,
+                        render: (h, params) => {
+                          if(params.row.status == 1){
+                            return h('Tag', {
+                              props: {
+                                 color: 'yellow',
+                             },
+                           },'立项')
+                          }else if(params.row.status == 2){
+                            return h('Tag', {
+                              props: {
+                                 color: 'blue',
+                             },
+                           },'开发中')
+                          }else if(params.row.status == 3){
+                            return h('Tag', {
+                              props: {
+                                 color: 'green',
+                             },
+                           },'已完成')
+                          }
+
+                        }
                     }
                 ],
                 data1: [
+                  {
+                      model: 'icons',
+                      description:"图表库",
+                      schedule: '2018-7-6',
+                      status: 3,
+                  },
                     {
                         model: 'Layout',
                         description:"主页面",
-                        schedule: 18,
-                        status: '进行中',
+                        schedule: '2018-7-6',
+                        status: 1,
                     },
+                    {
+                        model: 'Layout',
+                        description:"主页面",
+                        schedule: '2018-7-6',
+                        status: 2,
+                    },
+                    {
+                        model: 'Layout',
+                        description:"主页面",
+                        schedule: '2018-7-6',
+                        status: 3,
+                    },
+
                 ]
             }
         }

@@ -21,11 +21,12 @@
             <MainView>
                <router-view></router-view>
             </MainView>
+            <BackTop></BackTop>
           </Content>
         </div>
       </div>
-  
     </Layout>
+
   </div>
 </template>
 
@@ -42,7 +43,7 @@
     getNewTagList,
     getNextName
   } from '@/libs/util'
-  
+
   export default {
     components: {
       HeaderBar,
@@ -120,7 +121,7 @@
     }
   };
 </script>
- 
+
 <style scoped lang="scss">
   @import "./main";
 </style>

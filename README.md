@@ -1,4 +1,4 @@
- 
+
 # Iview Pro
 
 [![vue](https://img.shields.io/badge/vue-2.5.16-brightgreen.svg?style=flat-square)](https://github.com/vuejs/vue)
@@ -32,7 +32,7 @@ $ yarn serve         # 访问 http://localhost:8000
     └── views
         ├── login  登陆页面
         ├── main  主框架
-        ├── error-page  错误页面（iview-admin 2.0）
+        ├──   
 ```
 ## 模板
 
@@ -50,4 +50,3 @@ $ yarn serve         # 访问 http://localhost:8000
 - [iView](https://github.com/iview/iview)
 - [Vue](https://github.com/vuejs/vue)
 - [Webpack](https://github.com/webpack/webpack)
- 

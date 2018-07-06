@@ -1,12 +1,6 @@
 <template>
     <main class="main-view">
-        <!-- 下个版本 -->
-        <!-- <div class="main-view-loading">
-        </div> -->
-
-        <div class="view-content">
             <slot></slot>
-        </div>
     </main>
 </template>
 
@@ -14,10 +8,10 @@
     .main-view {
         position: relative;
         background: #f1f4f5;
-        .view-content {
-            padding: 20px 20px;
-            margin-right: auto;
-            margin-left: auto;
-        }
+        min-height: calc(100vh - 38px - 64px);
+        box-sizing: border-box;
+        padding: 20px 20px;
+        margin-right: auto;
+        margin-left: auto;
     }
 </style>
