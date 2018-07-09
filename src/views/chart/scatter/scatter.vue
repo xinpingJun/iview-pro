@@ -28,9 +28,9 @@ import BubbleScatter from './components/bubble-scatter.vue'
 import ManyColorScatter from './components/many-color-scatter.vue'
 export default {
   components:{
-BaseScatter,
-BubbleScatter,
-ManyColorScatter
+    BaseScatter,
+    BubbleScatter,
+    ManyColorScatter
   },
 
 }

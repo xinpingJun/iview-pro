@@ -14,7 +14,7 @@
       </Col>
       <Col :sm="12">
         <Card :bordered="false" class="m-b-10">
-            <p slot="title">基础形图</p>
+            <p slot="title">基础环形</p>
             <BaseDonut></BaseDonut>
         </Card>
       </Col>
