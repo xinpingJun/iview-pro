@@ -53,7 +53,7 @@
                   <div class="ntroduction-content">
                       Iview Pro是基于Vue.js,使用vue-cli 3.0 脚手架,
                       在[iView]UI组件库的基础上,参考[ivew-admin]的Vue后台管理通用解决方案。
-                      实现动态路由和权限验证,
+                      <del>实现动态路由和权限验证,</del>
                       新增侧边栏对话框,
                       常用模块封装,
                       常用页面的整理,
@@ -64,9 +64,7 @@
                     <Tag   color="blue">兼容IE11及现代浏览器</Tag>
                     <Tag   color="green">简单易用</Tag>
                     <Tag   color="red">crm</Tag>
-                    <Tag   color="yellow">节省时间</Tag>
-                    <Tag   color="blue">节约成本</Tag>
-                     <Tag   color="green">响应式布局</Tag>
+                     <Tag   color="yellow">响应式布局</Tag>
                   </div>
                   <div class="ntroduction-table">
                       <Table :columns="columns1" :data="data1"></Table>

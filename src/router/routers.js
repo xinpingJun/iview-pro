@@ -106,6 +106,22 @@ export default [{
         },
         component: () => import('@/views/page/page-noauth/noauth.vue')
       },
+      {
+        path: 'search_table',
+        name: 'search_table',
+        meta: {
+          title: '查询表格'
+        },
+        component: () => import('@/views/page/page-table/search-table.vue')
+      },
+      {
+        path: 'basic_form',
+        name: 'basic_form',
+        meta: {
+          title: '表单详情页'
+        },
+        component: () => import('@/views/page/page-form/basic-form.vue')
+      },
     ]
   },
   {
@@ -116,7 +132,24 @@ export default [{
       title: '表格示例'
     },
     component: Main,
-    children: [ ]
+    children: [
+      {
+        path: 'base_table',
+        name: 'base_table',
+        meta: {
+          title: '基本表格'
+        },
+        component: () => import('@/views/table/table.vue')
+      },
+      {
+        path: 'data_table',
+        name: 'data_table',
+        meta: {
+          title: '数据表格'
+        },
+        component: () => import('@/views/table/data-table.vue')
+      },
+    ]
   },
   {
     path: '/form',
@@ -127,6 +160,22 @@ export default [{
     },
     component: Main,
     children: [
+      {
+        path: 'base_form',
+        name: 'base_form',
+        meta: {
+          title: '基础表单'
+        },
+        component: () => import('@/views/form/form.vue')
+      },
+      {
+        path: 'other_form',
+        name: 'other_form',
+        meta: {
+          title: '其他表单'
+        },
+        component: () => import('@/views/form/other-form.vue')
+      },
     ]
   },
    {
@@ -189,6 +238,38 @@ export default [{
     },
     component: Main,
     children: [
+      {
+        path: 'user',
+        name: 'user',
+        meta: {
+          title: '用户管理'
+        },
+        component: () => import('@/views/system/page-user/user.vue')
+      },
+      {
+        path: 'role',
+        name: 'role',
+        meta: {
+          title: '角色管理'
+        },
+        component: () => import('@/views/system/page-role/role.vue')
+      },
+      {
+        path: 'department',
+        name: 'department',
+        meta: {
+          title: '部门管理'
+        },
+        component: () => import('@/views/system/page-department/department.vue')
+      },
+      {
+        path: 'dictionary',
+        name: 'dictionary',
+        meta: {
+          title: '字典管理'
+        },
+        component: () => import('@/views/system/page-dictionary/dictionary.vue')
+      },
     ]
   },
   // {

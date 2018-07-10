@@ -28,12 +28,10 @@
 export default {
   data(){
     return {
-      
+
     }
   }
-  created(){
-    console.log(1)
-  }
+
 }
 </script>
 

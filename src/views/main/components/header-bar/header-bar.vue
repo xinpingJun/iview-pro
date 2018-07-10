@@ -19,7 +19,7 @@
             <div class="right-item right-account">
                 <Dropdown>
                     <Avatar icon="person" size="small" />
-                    <span class="account-name">iview Admin</span>
+                    <span class="account-name">xinpingJun</span>
                     <DropdownMenu slot="list" class="user-list">
                         <DropdownItem> <i class="icon anticon icon-user"></i> 个人中心</DropdownItem>
                         <DropdownItem> <i class="icon anticon icon-setting"></i> 设置</DropdownItem>
@@ -33,7 +33,7 @@
 
 <script>
     import customBreadCrumb from './custom-bread-crumb'
-    
+
     export default {
         data() {
             return {
@@ -63,4 +63,3 @@
 <style lang="scss" scoped>
     @import './header-bar';
 </style>
- 

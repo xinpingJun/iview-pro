@@ -1,6 +1,6 @@
 <template>
     <main class="main-view">
-            <slot></slot>
+        <slot></slot>
     </main>
 </template>
 
@@ -13,5 +13,8 @@
         padding: 20px 20px;
         margin-right: auto;
         margin-left: auto;
+        &>.ivu-card{
+          min-height: calc(100vh - 38px - 64px - 40px);
+        }
     }
 </style>
