@@ -1,2 +1,0 @@
-(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([[22],{UAZe:function(t,e,r){"use strict";r.r(e);var s=function(){var t=this,e=t.$createElement,r=t._self._c||e;return r("Card",{attrs:{bordered:!1}},[r("p",{attrs:{slot:"title"},slot:"title"},[t._v("UI示例请访问 "),r("a",{attrs:{href:"https://www.iviewui.com/"}},[t._v("iview官网")]),t._v(" 2.14.3")]),r("p",[t._v("菜单UI示例为补充和修改模块及常用模块封装")])])},i=[],l=r("KHd+"),n={},a=Object(l["a"])(n,s,i,!1,null,null,null);e["default"]=a.exports}}]);
-//# sourceMappingURL=22.8e17dd84.js.map
