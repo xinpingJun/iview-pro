@@ -47,14 +47,14 @@ export default [{
         },
         component: () => import('@/views/ui/ui-model.vue')
       },
-      {
-        path: 'modals',
-        name: 'modals',
-        meta: {
-          title: '对话框 - modal'
-        },
-        component: () => import('@/views/ui/modals.vue')
-      },
+      // {
+      //   path: 'modals',
+      //   name: 'modals',
+      //   meta: {
+      //     title: '对话框 - modal'
+      //   },
+      //   component: () => import('@/views/ui/modals.vue')
+      // },
       {
         path: 'icons',
         name: 'icons',

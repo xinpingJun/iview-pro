@@ -1,19 +1,15 @@
 
 # Iview Pro
 
-[![vue](https://img.shields.io/badge/vue-2.5.16-brightgreen.svg?style=flat-square)](https://github.com/vuejs/vue)
-[![iview ui](https://img.shields.io/badge/iview-2.14.3-brightgreen.svg?style=flat-square)](https://github.com/iview/iview)
-[![npm](https://img.shields.io/npm/l/express.svg)]()
-
  Vue后台管理通用解决方案
 
 ## 使用
 
 ```bash
-$ git clone https://github.com/xinpingJun/vue-admin.git
-$ cd vue-admin
+$ git clone https://github.com/xinpingJun/iview-pro.git
+$ cd iview-pro
 $ yarn install
-$ yarn serve         # 访问 http://localhost:8000
+$ yarn serve         # 访问 http://localhost:8080
 ```
 
 ## 简介
@@ -32,12 +28,18 @@ $ yarn serve         # 访问 http://localhost:8000
     └── views
         ├── login  登陆页面
         ├── main  主框架
-        ├──   
+        ├── case 空白/栅格页面（常用页面布局）
+        ├── chart G2 表单  
+        ├── form 表单模块
+        ├── home 首页  
+        ├── page 常用页面模块
+        ├── system 系统管理模块  
+        ├── table 表格模块  
+        ├── UI ui模块  
 ```
 ## 模板
 
 ```
-- Dashboard
 ```
 
 ## 兼容性

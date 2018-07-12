@@ -27,7 +27,7 @@
     margin-right: -200px;
     position: relative;
     left: 0;
-    transition: all .2s ease-in-out;
+    // transition: all .2s ease-in-out;
     background: #fff; // border-right: solid 1px #e4eaec;
     box-shadow: 0 2px 4px rgba(0, 0, 0, .08);
     z-index: 10;
@@ -49,7 +49,7 @@
     display: flex;
     flex: 1;
     flex-direction: column;
-    transition: all .2s ease-in-out;
+    // transition: all .2s ease-in-out;
     .main-content {
         box-sizing: border-box;
     }
@@ -62,7 +62,7 @@
 
 .sider-collapse {
     left: -200px !important;
-    transition: all .2s ease-in-out;
+    // transition: all .2s ease-in-out;
 }
 
 @media (max-width: 768px) {

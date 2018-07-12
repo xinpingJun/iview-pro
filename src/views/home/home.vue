@@ -77,19 +77,8 @@
                     <Timeline>
                        <TimelineItem color="green">
                            <Icon type="trophy" slot="dot"></Icon>
-                           <p class="time-line-time">2018-7-7</p>
-                           <p class="time-line-content">发布里程碑版本</p>
-                       </TimelineItem>
-                       <TimelineItem>
-                         <p class="time-line-time">2018-7-7</p>
-                         <p class="time-line-content">发布1.0版本</p></TimelineItem>
-                       <TimelineItem>
-                            <p class="time-line-time">2018-7-7</p>
-                            <p class="time-line-content">发布2.0版本</p>
-                        </TimelineItem>
-                       <TimelineItem>
-                           <p class="time-line-time">2018-7-7</p>
-                           <p class="time-line-content">发布3.0版本</p>
+                           <p class="time-line-time">2018-7-12</p>
+                           <p class="time-line-content">发布粗糙的版本 v0.01</p>
                        </TimelineItem>
                    </Timeline>
                   </div>
@@ -158,22 +147,16 @@
                       status: 3,
                   },
                     {
-                        model: 'Layout',
-                        description:"主页面",
-                        schedule: '2018-7-6',
-                        status: 1,
-                    },
-                    {
-                        model: 'Layout',
-                        description:"主页面",
-                        schedule: '2018-7-6',
+                        model: 'system',
+                        description:"系统管理模块",
+                        schedule: '2018-7-12',
                         status: 2,
                     },
                     {
-                        model: 'Layout',
-                        description:"主页面",
-                        schedule: '2018-7-6',
-                        status: 3,
+                        model: 'role',
+                        description:"动态路由，权限认证",
+                        schedule: '2018-7-12',
+                        status: 1,
                     },
 
                 ]

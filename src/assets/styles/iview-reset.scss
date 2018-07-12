@@ -14,11 +14,15 @@ body{
       .ivu-dropdown-item{
           font-size: 13px !important;
       }
-    
-    // 卡片  
+
+    // 卡片
      .ivu-card{
+        transition:none !important;
         border: none;
-        border-radius: 0;   
+        border-radius: 0;
         box-shadow: 0 1px 1px rgba(0,0,0,.05);
+        &:hover{
+          box-shadow: none;
+        }
     }
 }

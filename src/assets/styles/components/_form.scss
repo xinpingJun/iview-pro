@@ -1,0 +1,14 @@
+.form-page {
+  .ivu-form {
+    .ivu-form-item-label {
+      font-size: 14px;
+      position: relative;
+      &:after {
+        content: ":";
+          margin: 0 -2px 0 4px;
+        position: relative;
+        top: -.5px;
+      }
+    }
+  }
+}

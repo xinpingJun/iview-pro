@@ -13,12 +13,12 @@
           <Radios></Radios>
         </Card>
       </Col>
-      <Col  :sm="6" >
+      <!-- <Col  :sm="6" >
         <Card :bordered="false" class="m-b-10">
           <p slot="title">Switchs（无法显示）</p>
           <Switchs></Switchs>
         </Card>
-      </Col>
+      </Col> -->
       <Col  :sm="6" >
         <Card :bordered="false" class="m-b-10">
           <p slot="title">Checkboxs</p>
