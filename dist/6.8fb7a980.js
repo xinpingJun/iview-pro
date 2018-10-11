@@ -1,2 +1,0 @@
-(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([[6],{Hryk:function(t,n,e){"use strict";e.r(n);var r=function(){var t=this,n=t.$createElement,e=t._self._c||n;return e("Card",{attrs:{bordered:!1}},[e("p",{attrs:{slot:"title"},slot:"title"},[t._v("正在开发中")])])},s=[],l={},a=l,o=(e("bYPT"),e("KHd+")),u=Object(o["a"])(a,r,s,!1,null,null,null);n["default"]=u.exports},bYPT:function(t,n,e){"use strict";var r=e("kPhW"),s=e.n(r);s.a},kPhW:function(t,n,e){}}]);
-//# sourceMappingURL=6.8fb7a980.js.map

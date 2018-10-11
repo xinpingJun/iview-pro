@@ -1,3 +1,19 @@
+
+// 头部缩放
+.collapse{
+  .layout-logo{
+      width: 80px;
+      .logo-text {
+        display: none;
+      }
+  }
+  .custom-wrapper{
+    left: 144px;
+  }
+  .collapse-btn {
+    left:80px;
+  }
+}
 .layout-logo {
     height: 64px;
     line-height: 64px;
@@ -6,22 +22,35 @@
     width: 200px;
     padding-left: 30px;
     text-align: center;
+      transition: all .2s ease-in-out;
     img {
         width: 32px;
         margin-right: 5px;
         position: absolute;
         top: 15px;
-        left: 30px;
+        left: 25px;
     }
     .logo-text {
         font-size: 20px;
         display: inline-block;
         color: #Fff;
         font-weight: normal;
+        transition: all .2s ease-in-out;
+
     }
 }
 
+.custom-wrapper {
+    position: absolute;
+    left: 264px;
+    color: #fff;
+    top: 0;
+    transition: all .2s ease-in-out;
+
+}
+
 .collapse-btn {
+
     position: absolute;
     left: 200px;
     height: 64px;
@@ -30,6 +59,11 @@
     text-align: center;
     cursor: pointer;
     transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition: all .2s ease-in-out;
+
+    &:hover{
+        background: rgba(100, 100, 100, 0.1);
+    }
     &.active {
         i {
             &::before {
@@ -48,10 +82,10 @@
     height: 100%;
     overflow: hidden;
     .right-item {
-        display: inline-block;
-        padding: 0 12px;
-        cursor: pointer;
-        color: #fff;
+       float: right;
+       color: #fff;
+       cursor: pointer;
+       margin-right: 15px;
         .account-name {
             margin: 0 5px;
         }
@@ -70,17 +104,10 @@
     }
 }
 
-.custom-wrapper {
-    position: absolute;
-    left: 264px;
-    color: #fff;
-    top: 0;
-}
-
 @media (max-width: 768px) {
-    .collapse-btn {
-        display: none;
-    }
+    // .collapse-btn {
+    //     display: none;
+    // }
     .custom-wrapper {
         display: none;
     }

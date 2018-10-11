@@ -54,5 +54,6 @@ export default {
 <style lang="scss" scope>
 .m-b-10 {
     margin-bottom: 10px;
+    margin-top: 0px;
 }
 </style>

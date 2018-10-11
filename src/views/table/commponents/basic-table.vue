@@ -1,6 +1,14 @@
 <template>
-    <Table :columns="columns1" :data="data1"></Table>
+    <Table class="table" :columns="columns1" :data="data1"></Table>
 </template>
+<style  >
+.table table{
+/* // table-layout: auto;
+width: 100% !important; */
+/* transition: none; */
+overflow: hidden;
+}
+</style>
 <script>
     export default {
         data () {

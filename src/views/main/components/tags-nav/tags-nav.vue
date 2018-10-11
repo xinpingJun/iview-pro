@@ -1,46 +1,44 @@
 <template>
-  <div class="tags-nav">
-    <div class="close-con">
-      <Dropdown transfer @on-click="handleTagsOption" style="margin-top:7px; "  >
-        <Button size="small" type="text">
-          <Icon :size="12" type="chevron-down"></Icon>
+<div class="tags-nav">
+  <div class="close-con">
+    <Dropdown transfer @on-click="handleTagsOption" style="margin-top:7px; ">
+      <Button size="small" type="text">
+          <Icon :size="18" type="ios-close-circle-outline"></Icon>
         </Button>
-        <DropdownMenu   class="close-menu" slot="list">
-          <DropdownItem name="close-others"> <Icon type="close-round"></Icon> 关闭其他</DropdownItem>
-          <DropdownItem name="close-all"> <Icon type="log-out"></Icon> 关闭所有</DropdownItem>
-        </DropdownMenu>
-      </Dropdown>
-    </div>
-    <div class="btn-con left-btn">
-      <Button icon="chevron-left" type="text" @click="handleScroll(240)"></Button>
-    </div>
-    <div class="btn-con right-btn">
-      <Button icon="chevron-right" type="text" @click="handleScroll(-240)"></Button>
-    </div>
-    <div class="scroll-outer" ref="scrollOuter" @DOMMouseScroll="handlescroll" @mousewheel="handlescroll">
-     
-      <div ref="scrollBody" class="scroll-body" :style="{left: tagBodyLeft + 'px'}">
-        <transition-group name="taglist-moving-animation">
-          <Tag
-            type="dot"
-            v-for="item in list"
-            ref="tagsPageOpened"
-            :key="`tag-nav-${item.name}`"
-            :name="item.name"
-            @on-close="handleClose"
-            @click.native="handleClick(item)"
-            :closable="item.name !== 'home'"
-            :color="item.name === value.name ? 'blue' : 'default'"
-          >{{ showTitleInside(item) }}</Tag>
-        </transition-group>
-      </div>
-
-    </div>
+      <DropdownMenu class="close-menu" slot="list">
+        <DropdownItem name="close-others">
+          <Icon type="close-round"></Icon> 关闭其他</DropdownItem>
+        <DropdownItem name="close-all">
+          <Icon type="log-out"></Icon> 关闭所有</DropdownItem>
+      </DropdownMenu>
+    </Dropdown>
   </div>
+  <div class="btn-con left-btn">
+    <Button type="text" @click="handleScroll(240)">
+          <Icon :size="18" type="ios-arrow-back"></Icon>
+      </Button>
+  </div>
+  <div class="btn-con right-btn">
+    <Button type="text" @click="handleScroll(-240)">
+        <Icon :size="18" type="ios-arrow-forward"></Icon>
+      </Button>
+  </div>
+  <div class="scroll-outer" ref="scrollOuter" @DOMMouseScroll="handlescroll" @mousewheel="handlescroll">
+
+    <div ref="scrollBody" class="scroll-body" :style="{left: tagBodyLeft + 'px'}">
+      <transition-group name="taglist-moving-animation">
+        <Tag type="dot" v-for="item in list" ref="tagsPageOpened" :key="`tag-nav-${item.name}`" :name="item.name" @on-close="handleClose" @click.native="handleClick(item)" :closable="item.name !== 'home'" :color="item.name === value.name ? 'primary' : 'default'">{{ showTitleInside(item) }}</Tag>
+      </transition-group>
+    </div>
+
+  </div>
+</div>
 </template>
 
 <script>
-import { showTitle } from '@/libs/util'
+import {
+  showTitle
+} from '@/libs/util'
 export default {
   name: 'TagsNav',
   props: {
@@ -52,13 +50,15 @@ export default {
       }
     }
   },
-  data () {
+  data() {
     return {
-      tagBodyLeft: 0
+      tagBodyLeft: 0,
+      outerPadding: 4,
+      visible: false,
     }
   },
   methods: {
-    handlescroll (e) {
+    handlescroll(e) {
       var type = e.type
       let delta = 0
       if (type === 'DOMMouseScroll' || type === 'mousewheel') {
@@ -66,7 +66,7 @@ export default {
       }
       this.handleScroll(delta)
     },
-    handleScroll (offset) {
+    handleScroll(offset) {
       if (offset > 0) {
         this.tagBodyLeft = Math.min(0, this.tagBodyLeft + offset)
       } else {
@@ -81,7 +81,7 @@ export default {
         }
       }
     },
-    handleTagsOption (type) {
+    handleTagsOption(type) {
       if (type === 'close-all') {
         // 关闭所有，除了home
         let res = this.list.filter(item => item.name === 'home')
@@ -90,25 +90,71 @@ export default {
         // 关闭除当前页和home页的其他页
         let res = this.list.filter(item => item.name === this.value.name || item.name === 'home')
         this.$emit('on-close', res, 'others')
+        setTimeout(() => {
+          this.getTagElementByName(this.currentRouteObj.name)
+        }, 100)
       }
+
     },
-    handleClose (e, name) {
+    handleClose(e, name) {
       let res = this.list.filter(item => item.name !== name)
       this.$emit('on-close', res, undefined, name)
     },
-    handleClick (item) {
+    handleClick(item) {
       this.$emit('input', item)
     },
-    showTitleInside (item) {
+    showTitleInside(item) {
       return showTitle(item, this)
+    },
+    getTagElementByName(name) {
+      this.$nextTick(() => {
+        this.refsTag = this.$refs.tagsPageOpened
+        this.refsTag.forEach((item, index) => {
+          if (name === item.name) {
+            let tag = this.refsTag[index].$el
+            this.moveToView(tag)
+          }
+        })
+      })
+    },
+    moveToView(tag) {
+      const outerWidth = this.$refs.scrollOuter.offsetWidth
+      const bodyWidth = this.$refs.scrollBody.offsetWidth
+      if (bodyWidth < outerWidth) {
+        this.tagBodyLeft = 0
+      } else if (tag.offsetLeft < -this.tagBodyLeft) {
+        // 标签在可视区域左侧
+        this.tagBodyLeft = -tag.offsetLeft + this.outerPadding
+      } else if (tag.offsetLeft > -this.tagBodyLeft && tag.offsetLeft + tag.offsetWidth < -this.tagBodyLeft + outerWidth) {
+        // 标签在可视区域
+        this.tagBodyLeft = Math.min(0, outerWidth - tag.offsetWidth - tag.offsetLeft - this.outerPadding)
+      } else {
+        // 标签在可视区域右侧
+        this.tagBodyLeft = -(tag.offsetLeft - (outerWidth - this.outerPadding - tag.offsetWidth))
+      }
+    },
+  },
+  watch: {
+    '$route' (to) {
+      this.getTagElementByName(to.name)
+    },
+    visible(value) {
+      if (value) {
+        document.body.addEventListener('click', this.closeMenu)
+      } else {
+        document.body.removeEventListener('click', this.closeMenu)
+      }
     }
+  },
+  mounted() {
+    setTimeout(() => {
+      this.getTagElementByName(this.$route.name)
+    }, 200)
   }
 }
 </script>
 
 <style lang="less">
 @import './tags-nav.less';
-.close-menu{
-  border-radius: 0;
-}
+
 </style>

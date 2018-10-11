@@ -1,40 +1,40 @@
 
 <template>
   <div class="layout">
-    <Layout class="layout-wrapper">
+    <div class="layout-wrapper">
       <!-- 顶部栏 -->
-      <Header class="header-wrapper">
+      <div class="header-wrapper">
         <HeaderBar @collapseFun="collapse_fun"></HeaderBar>
-      </Header>
+      </div>
       <div class="layout-main">
         <div class="sider-bar " :class="{ 'sider-collapse':isCollapse}">
           <!-- 侧边栏 -->
-          <SideMenu :active-name="$route.name" :menuList="menuList"></SideMenu>
+          <SideMenu :collapse="isCollapse" :active-name="$route.name" :menuList="menuList"></SideMenu>
         </div>
         <div class="layout-content" :class="{ 'content-collapse':isCollapse}">
-          <!-- tag -->
           <div class="tag-nav-wrapper">
             <tags-nav :value="$route" @input="handleClick" :list="tagNavList" @on-close="handleCloseTag" />
           </div>
-          <Content class="main-content">
+          <div class="main-content">
             <!-- 主内容 -->
             <MainView>
                <router-view></router-view>
             </MainView>
-            <BackTop></BackTop>
-          </Content>
+          </div>
         </div>
       </div>
-    </Layout>
+
+    </div>
+    <BackTop></BackTop>
 
   </div>
 </template>
 
 <script>
-  import HeaderBar from './components/header-bar/header-bar'
-  import SideMenu from './components//side-menu//side-menu'
+  import HeaderBar from './components/header-bar'
+  import SideMenu from './components/side-menu'
   import TagsNav from './components/tags-nav'
-  import MainView from './components//main-view/index'
+  import MainView from './components/main-view'
   import {
     mapMutations,
     mapActions
@@ -42,6 +42,7 @@
   import {
     getNewTagList,
     getNextName
+
   } from '@/libs/util'
 
   export default {

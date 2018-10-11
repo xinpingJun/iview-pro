@@ -8,13 +8,13 @@
 							<p>VUE后台管理通用解决方案</p>
 						</span>
 					<div class="wrap-input100 validate-input ">
-						<input class="input100" :class="{'has-val':usernameEmpty}" type="text" v-model="username">
+						<input class="input100"  :class="{'has-val':usernameEmpty}" type="text" v-model="username">
 						<span class="focus-input100"></span>
 						<span class="label-input100">用户名</span>
 					</div>
 
 					<div class="wrap-input100 validate-input">
-						<input class="input100 " :class="{'has-val':passwordEmpty}" type="password" v-model="password">
+						<input class="input100 "  :class="{'has-val':passwordEmpty}" type="password" v-model="password">
 						<span class="focus-input100"></span>
 						<span class="label-input100">密码</span>
 					</div>
@@ -68,7 +68,14 @@
 		},
 		methods: {
 			login() {
-				this.$router.push('/home')
+				if(this.username == ''){
+					this.$Message.error('请填写用户名！');
+				}else if(this.password == ''){
+					this.$Message.error('请输入密码！');
+				}else {
+					this.$router.push('/home')
+				}
+
 			}
 		}
 	}
@@ -79,11 +86,9 @@
 	.p-b-43 {
 		padding-bottom: 43px;
 	}
-
 	.p-t-3 {
 		padding-top: 3px;
 	}
-
 	.p-b-32 {
 		padding-bottom: 32px;
 	}

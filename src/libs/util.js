@@ -205,7 +205,7 @@ export const doCustomTimes = (times, callback) => {
     callback()
   }
 }
-
+ 
 /**
  * @param {Object} file 从上传组件得到的文件对象
  * @returns {Promise} resolve参数是解析后的二维数组
@@ -263,10 +263,23 @@ export const getTableDataFromArray = (array) => {
 }
 
 /**
- * @param {title} String 
+ * @param {title} String
  * @return 返回浏览器标题
  */
 export const setTitle = function (title) {
   title = title || 'iView admin';
   window.document.title = title;
 };
+
+
+export const findNodeUpperByClasses = (ele, classes) => {
+  let parentNode = ele.parentNode
+  if (parentNode) {
+    let classList = parentNode.classList
+    if (classList && classes.every(className => classList.contains(className))) {
+      return parentNode
+    } else {
+      return findNodeUpperByClasses(parentNode, classes)
+    }
+  }
+}

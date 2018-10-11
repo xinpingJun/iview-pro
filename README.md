@@ -9,8 +9,12 @@
 $ git clone https://github.com/xinpingJun/iview-pro.git
 $ cd iview-pro
 $ yarn install
-$ yarn serve         # 访问 http://localhost:8080
+$ yarn serve    # 访问 http://localhost:8080
+$ yarn build     
+
 ```
+
+
 
 ## 简介
 &emsp;&emsp;Iview Pro是基于Vue.js，搭配使用[iView],参考[ivew-admin]，使用vue-cli 3.0 脚手架搭建的 Vue后台管理通用解决方案,实现动态路由和权限验证,新增侧边栏模态框,使用bootstrap栅格栏,ant-desgin 图标库。
@@ -52,3 +56,6 @@ $ yarn serve         # 访问 http://localhost:8080
 - [iView](https://github.com/iview/iview)
 - [Vue](https://github.com/vuejs/vue)
 - [Webpack](https://github.com/webpack/webpack)
+
+# 问题汇总
+- 表格无法自是适应 ，flex布局问题

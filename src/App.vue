@@ -1,22 +1,22 @@
 <template>
-  <div id="app">
-    <keep-alive>
+<div id="app">
+  <keep-alive>
     <router-view/>
-    </keep-alive>
-  </div>
+  </keep-alive>
+</div>
 </template>
 
 <style lang="scss">
 @import url('./assets/iconfonts/iconfont.css');
 @import './assets/styles/iview-reset';
-@import  './assets/styles/iview-pro';
-html,body{
+@import './assets/styles/iview-pro';
+body,
+html {
     width: 100%;
     height: 100%;
-    overflow: hidden;
     background: #f1f4f5;
 }
-#app{
+#app {
     width: 100%;
     height: 100%;
 }

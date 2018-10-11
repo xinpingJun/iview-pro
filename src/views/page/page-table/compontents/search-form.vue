@@ -36,7 +36,7 @@
             <Col  :sm="8" >
               <FormItem >
                 <Button size="large" type="primary" > 搜索 </Button>
-                <Button size="large" type="ghost"  style="margin-left: 8px"> 重置 </Button>
+                <Button size="large"   style="margin-left: 8px"> 重置 </Button>
                 <Button size="large" @click="toggle_form" class="toggle-btn" type="text"  style="margin-left: 8px">
                   <span v-show="isShow">收起 <Icon type="chevron-up"></Icon></span>
                   <span v-show="!isShow">展开 <Icon type="chevron-down"></Icon></span>

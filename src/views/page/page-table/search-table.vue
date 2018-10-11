@@ -7,11 +7,12 @@
           <div class="table-centent">
             <div class="table-btns">
               <div class="left">
-                <Button  class="add-btn" type="primary" > <i class="icon anticon icon-pluscircleo"></i> 新增 </Button>
+                <Button  size="small" class="add-btn" type="primary" > <i class="icon anticon icon-pluscircleo"></i> 新增 </Button>
               </div>
               <div class="right">
                 <ButtonGroup  >
-                    <Button type="ghost"> <i class="icon anticon icon-sync"></i></Button>
+                    <Button size="small"  > <i class="icon anticon icon-sync"></i></Button>
+                    <Button size="small"  > <i class="icon anticon  icon-download"></i></Button>
                 </ButtonGroup>
               </div>
             </div>

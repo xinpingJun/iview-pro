@@ -1,0 +1,2 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["chunk-16cfbd0c"],{"0f5c":function(t,e,n){"use strict";n.r(e);var r=function(){var t=this,e=t.$createElement,n=t._self._c||e;return n("Card",{attrs:{bordered:!1}},[n("p",{attrs:{slot:"title"},slot:"title"},[t._v("正在开发中")])])},o=[],c={},s=c,a=(n("abf0"),n("2877")),f=Object(a["a"])(s,r,o,!1,null,null,null);f.options.__file="other-form.vue";e["default"]=f.exports},"4f06":function(t,e,n){},abf0:function(t,e,n){"use strict";var r=n("4f06"),o=n.n(r);o.a}}]);
+//# sourceMappingURL=chunk-16cfbd0c.c7a5a517.js.map

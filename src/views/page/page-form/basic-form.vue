@@ -49,7 +49,7 @@
               </FormItem>
               <FormItem>
                   <Button size="large" type="primary" @click="handleSubmit('formValidate')"> 提交 </Button>
-                  <Button size="large" type="ghost" @click="handleReset('formValidate')" style="margin-left: 8px"> 重置 </Button>
+                  <Button size="large"   @click="handleReset('formValidate')" style="margin-left: 8px"> 重置 </Button>
               </FormItem>
           </Form>
       </div>

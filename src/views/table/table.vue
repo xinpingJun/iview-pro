@@ -4,7 +4,7 @@
       <Col :sm="12" >
         <Card :bordered="false" class="m-b-10">
           <p slot="title">常规</p>
-          <BasicTable></BasicTable>
+            <BasicTable></BasicTable>
         </Card>
       </Col>
       <Col   :sm="12"  >

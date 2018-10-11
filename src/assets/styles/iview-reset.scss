@@ -1,28 +1,27 @@
-
-
-body{
-    // 标签
-    .ivu-badge-dot{
-        box-shadow: none !important;
+body {
+  // 标签
+  .ivu-badge-dot {
+    box-shadow: none !important;
+  }
+  // 下拉菜单
+  .ivu-select-dropdown {
+    box-shadow: 0 3px 12px rgba(0,0,0,.05) !important;
+  }
+  .ivu-dropdown-item {
+    // font-size: 13px !important;
+  }
+  // 卡片
+  .ivu-card {
+    transition: none !important;
+    border: none;
+    border-radius: 0;
+    box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    &:hover {
+      box-shadow: none;
     }
-    // 下拉菜单
-    .ivu-select-dropdown{
-        box-shadow:0 3px 12px rgba(0,0,0,.05) !important;
-        border-radius: 0 !important;
-        border: 1px solid #e4eaec;
-      }
-      .ivu-dropdown-item{
-          font-size: 13px !important;
-      }
-
-    // 卡片
-     .ivu-card{
-        transition:none !important;
-        border: none;
-        border-radius: 0;
-        box-shadow: 0 1px 1px rgba(0,0,0,.05);
-        &:hover{
-          box-shadow: none;
-        }
-    }
+  }
+  // 菜单边线
+  .ivu-menu-vertical.ivu-menu-light:after {
+    background: none;
+  }
 }

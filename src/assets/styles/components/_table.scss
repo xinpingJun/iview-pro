@@ -15,7 +15,6 @@
     }
     .toggle-btn{
       color: #2d8cf0;
-
     }
   }
   .table-centent{
@@ -39,35 +38,30 @@
 
 
 // table
-
+//
 .ivu-table-wrapper {
-  border: none !important;
+  overflow: auto;
+  border-color: transparent !important;
 }
 .ivu-table-cell {
   color: #333;
 }
 .ivu-table th {
   font-weight: bold;
-  height: 50px;
-  line-height: 50px;
 }
 .ivu-table th,
 .ivu-table td {
-  transition: none;
   border-bottom: 1px solid #eef1f6 !important;
-
 }
 .ivu-table:before {
-  display: none !important;
+  background-color: transparent !important;
 }
 .ivu-table:after {
-  display: none !important;
+  background-color: transparent !important;
 }
 
 .ivu-table-fixed::before, .ivu-table-fixed-right::before{
-  display: none;
+  border-color: transparent !important;
+  background-color: transparent !important;
+
 }
-//
-// th .ivu-table-cell{
-//   line-height: 1;
-// }
