@@ -36,17 +36,7 @@ $ yarn build    # 打包
     ├── router  路由配置
     ├── store  状态管理
     ├── vendors  公共库文件 （jaquery等）
-    └── views
-        ├── login  登陆页面
-        ├── main  主框架
-        ├── case 空白/栅格页面（常用页面布局）
-        ├── chart G2 表单  
-        ├── form 表单模块
-        ├── home 首页  
-        ├── page 常用页面模块
-        ├── system 系统管理模块  
-        ├── table 表格模块  
-        ├── UI ui模块  
+    └── views 页面文件
     ├── App.vue 入口页面
     └── main.js 入口配置
 ├── eslintrc.js  Javascript静态检查工具
@@ -86,7 +76,22 @@ $ yarn build    # 打包
   - 非空 HTML 特性值应该始终带引号 (单引号或双引号，选你 JS 里不用的那个) :style="{ width: sidebarWidth + 'px' }"
   - 指令缩写 (用 : 表示 v-bind: 和用 @ 表示 v-on:) 应该要么都用要么都不用。
 
+## 组件/页面开发 文件结构命名范例
+
+ ```shell
+ 
+     ├── todo-list  组件
+       ├── index.js  导出组件js
+       ├── todo-list.vue  组件
+       ├── todo-list.scss  样式文件
+       ├── components   子组件
+          ├── todo-list-item.vue
+          ├── todo-list-item-button.vue
+
+ ```
+
 ## 兼容性
+
 现代浏览器及 IE11。
 
 ## 页面展示

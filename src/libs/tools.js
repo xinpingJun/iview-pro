@@ -1,3 +1,10 @@
+
+/**
+ * [forEach description]
+ * @param  {[type]}   arr [description]
+ * @param  {Function} fn  [description]
+ * @return {[type]}       [description]
+ */
 export const forEach = (arr, fn) => {
   if (!arr.length || !fn) return
   let i = -1

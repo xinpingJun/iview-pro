@@ -1,2 +1,0 @@
-(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["chunk-77f88464"],{"370f":function(t,n,e){"use strict";var r=e("b82d"),c=e.n(r);c.a},"8bcc":function(t,n,e){"use strict";e.r(n);var r=function(){var t=this,n=t.$createElement,e=t._self._c||n;return e("Card",{attrs:{bordered:!1}},[e("p",{attrs:{slot:"title"},slot:"title"},[t._v("正在开发中")])])},c=[],i={},o=i,s=(e("370f"),e("2877")),l=Object(s["a"])(o,r,c,!1,null,null,null);l.options.__file="dictionary.vue";n["default"]=l.exports},b82d:function(t,n,e){}}]);
-//# sourceMappingURL=chunk-77f88464.3344f572.js.map

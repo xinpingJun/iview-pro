@@ -1,2 +1,0 @@
-(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["chunk-bc649a96"],{7942:function(t,e,n){},e55c:function(t,e,n){"use strict";var r=n("7942"),c=n.n(r);c.a},f593:function(t,e,n){"use strict";n.r(e);var r=function(){var t=this,e=t.$createElement,n=t._self._c||e;return n("Card",{attrs:{bordered:!1}},[n("p",{attrs:{slot:"title"},slot:"title"},[t._v("正在开发中")])])},c=[],l={},o=l,s=(n("e55c"),n("2877")),u=Object(s["a"])(o,r,c,!1,null,null,null);u.options.__file="role.vue";e["default"]=u.exports}}]);
-//# sourceMappingURL=chunk-bc649a96.1e98bd6f.js.map
