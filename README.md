@@ -58,6 +58,11 @@ $ yarn build    # 打包
 - [ ]   开发环境/生产环境切换，配置文件
 - [ ]   表单详情页面，查询表格页面
 - [x]   目录结构规范 组件使用index.js导出
+- [ ]   前期 mock 数据 ， 后期添加服务端nodejs,koa2
+- [ ]   基于 Sortable.js 的 Vue 拖拽组件。 Vue.Draggable
+- [ ]   Vue-Quill-Editor：基于Quill、适用于Vue2的富文本编辑器。
+- [x]   vddl：vue拖拽插件 http://hejx.space/vddl/#/zh-cn/guide/quick-start
+- [x]   jsplumb 流程图 https://jsplumbtoolkit.com
 
 ## 组件规范 （必须）
   - 组件名应该始终是多个单词的  命名：todo-item  导入/使用：TodoItem  
@@ -79,7 +84,7 @@ $ yarn build    # 打包
 ## 组件/页面开发 文件结构命名范例
 
  ```shell
- 
+
      ├── todo-list  组件
        ├── index.js  导出组件js
        ├── todo-list.vue  组件
@@ -89,6 +94,10 @@ $ yarn build    # 打包
           ├── todo-list-item-button.vue
 
  ```
+## ClassName 命名规范
+  -  ClassName的命名应该尽量精短、明确，必须以字母开头命名，且全部字母为小写，单词之间统一使用下划线 " _ " 连接
+  -  id命名使用驼峰命名
+## scss 书写规范
 
 ## 兼容性
 

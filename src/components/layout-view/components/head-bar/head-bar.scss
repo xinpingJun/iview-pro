@@ -1,0 +1,19 @@
+.head_bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 13px 20px;
+  background: rgb(255, 255, 255);
+  z-index: 999;
+  &_title{
+    color: #666;
+    font-size: 16px;
+    font-weight: normal;
+      .icon{
+        vertical-align: middle;
+        margin-right: 8px;
+        -webkit-font-smoothing: antialiased;
+
+      }
+  }
+}

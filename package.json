@@ -5,7 +5,9 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
   },
   "dependencies": {
     "@antv/data-set": "^0.9.6",
@@ -14,9 +16,11 @@
     "file-saver": "^2.0.0-rc.3",
     "iview": "^3.1.3",
     "js-cookie": "^2.2.0",
+    "jsplumb": "^2.8.3",
     "less": "^3.0.4",
     "less-loader": "^4.1.0",
     "mockjs": "^1.0.1-beta3",
+    "vddl": "^0.7.1",
     "vue": "^2.5.16",
     "vue-router": "^3.0.1",
     "vuex": "^3.0.1",
@@ -28,7 +32,8 @@
     "@vue/cli-service": "^3.0.0-beta.15",
     "node-sass": "^4.9.0",
     "sass-loader": "^7.0.1",
-    "vue-template-compiler": "^2.5.16"
+    "vue-template-compiler": "^2.5.16",
+    "vuepress": "^0.14.4"
   },
   "browserslist": [
     "> 1%",

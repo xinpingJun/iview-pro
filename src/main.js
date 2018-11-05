@@ -7,6 +7,11 @@ import iView from 'iview';
 import 'iview/dist/styles/iview.css';
 // import './assets/theme/index.less'
 Vue.use(iView);
+
+// 拖拽插件
+import Vddl from 'vddl';
+Vue.use(Vddl);
+
 Vue.config.productionTip = false
 new Vue({
   router,

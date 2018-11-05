@@ -1,0 +1,26 @@
+.layout_simple {
+  width: 100%;
+  height: 100%;
+  background-color: #fafafa;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: row;
+
+  &_aside {
+    flex: 0 0 auto;
+    width: auto;
+    background: #22d7bb;
+    display: block;
+    transition: all 0.2s linear;
+  }
+
+  &_mian {
+    flex: auto;
+    display: block;
+    padding: 0;
+    overflow: hidden;
+    background: rgb(238, 238, 238);
+    padding: 12px;
+  }
+}

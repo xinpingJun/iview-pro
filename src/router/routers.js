@@ -362,7 +362,12 @@ export default [{
       },
     ]
   },
-
+  {
+    path: '/layout_simple',
+    name: 'layout_simple',
+    component: () =>
+      import ('@/components/layout-view')
+  },
   {
     path: '/noauth',
     name: 'noauth',
